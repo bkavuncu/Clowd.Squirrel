@@ -13,6 +13,7 @@
     <PackAsTool>true</PackAsTool>
     <Description>A .NET Core Tool that uses the Squirrel framework to create installers and update packages for dotnet applications.</Description>
     <PackageIcon>Clowd_200.png</PackageIcon>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
   </PropertyGroup>
   
   <ItemGroup>

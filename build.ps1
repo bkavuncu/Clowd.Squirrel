@@ -40,9 +40,8 @@ Remove-Item Clowd.Squirrel*.nupkg
 
 Write-Host "Publishing SingleFile Projects" -ForegroundColor Magenta
 $ToolsDir = "squirrel\tools"
-dotnet publish -v minimal --no-build -c Release --no-self-contained "$PSScriptRoot\src\Squirrel.CommandLine\Squirrel.CommandLine.csproj" -o "$ToolsDir"
-dotnet publish -v minimal --no-build -c Release --self-contained "$PSScriptRoot\src\Update.Windows\Update.Windows.csproj" -o "$ToolsDir"
-dotnet publish -v minimal --no-build -c Release --self-contained "$PSScriptRoot\src\Update.OSX\Update.OSX.csproj" -o "$ToolsDir"
+dotnet publish -v minimal  -c Release -r win-x64 --self-contained "$PSScriptRoot\src\Squirrel.CommandLine\Squirrel.CommandLine.csproj" -o "$ToolsDir"
+dotnet publish -v minimal  -c Release -r win-x64 --self-contained "$PSScriptRoot\src\Update.Windows\Update.Windows.csproj" -o "$ToolsDir"
 
 Write-Host "Copying Tools" -ForegroundColor Magenta
 # Copy all the tools into the 'csq' package

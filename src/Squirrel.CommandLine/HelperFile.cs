@@ -65,7 +65,7 @@ namespace Squirrel.CommandLine
         {
             var baseDirs = new[] {
                 AppContext.BaseDirectory,
-                Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+                Path.GetDirectoryName(System.AppContext.BaseDirectory),
                 Environment.CurrentDirectory,
             };
 
